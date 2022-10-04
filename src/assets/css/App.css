@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: Nunito;
+    src: url(./fonts/Nunito-Medium.ttf);
+  }
+@font-face {
+    font-family: AdvertisingScript;
+    src: url(./fonts/Advertising-Script-Bold.ttf);
+  }
 #root{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
@@ -12,6 +20,7 @@
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
     position: absolute;
+    z-index: 99999;
 }
 .coming-soon-content{
     color: #fff;
@@ -23,9 +32,17 @@
 
 .video-content{
     width: 100%;
-    background: url('../img/philippine-water-footage.gif') no-repeat 0 0;
+    /*background: url('../img/philippine-water-footage.gif') no-repeat 0 0;*/
     height: 100vh;
-    background-size: cover;
+    /*background-size: cover;*/
+    object-fit: cover;
+}
+video{
+    width: 100% !important;
+    object-fit: cover;
+    height: 100vh !important;
+    left: 0 !important;
+    top: 0 !important;
 }
 
 .app-wrapper {
@@ -37,17 +54,22 @@
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    top: 40%;
 }
 h4.app-header {
     width: 50%;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: nunito;
 }
 h1.app-content {
     width: 51%;
-    font-size: 5rem;
+    font-size: 8rem;
+    font-family: advertisingscript;
 }
-
+.app-wrapper img {
+    height: 100vh;
+    width: 100%;
+}
 @media only screen and (max-width: 790px) {
     h4.app-header {
         font-size: 1rem;
